@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call_Status | edit</title>
+  <!-- <link rel="stylesheet" href="/css/style.css"> -->
+  <link rel="icon" href="/images/logo1.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+ <style>
+   /* #editbox{
+    width: 20cm;
+    margin: auto;
+  }  */
+
+</style> 
+
+<body>
+
+
+<div class="container p-3" id="edit">
+  <div class="row">
+    <div class="col ">
+
+      <div class="modal-body " id="editbox">
+        <form method="post" id="userform" action="/edit/<%= value.controllerno %>" enctype="multipart/form-data">
+          <div class="row">
+          <div class="col">
+            <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Company :</label>
+            <select class="form-select" aria-label="Default select example" name="company">
+              <option value="CRI" <%=value.company==='CRI' ? 'selected' :'' %>>CRI</option>
+              <option value="KSB " <%=value.company==='KSB' ? 'selected' :'' %>>KSB</option>
+              <option value="PSG" <%=value.company==='PSG' ? 'selected' :'' %>>PSG</option>
+              <option value="PRIVATE " <%=value.company==='PRIVATE' ? 'selected' :'' %>>PRIVATE</option>
+            </select>
+          </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Phone :</label>
+            <input type="number" class="form-control" id="recipient-name" name="phone" value="<%= value.phone %>">
+          </div>
+        </div>
+        </div>
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">ControllerNo :</label>
+            <input type="text" class="form-control" id="recipient-name" name="controllerno"
+              value="<%= value.controllerno %>">
+          </div>
+
+          <div class="row">
+            <div class="col">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Date :</label>
+            <input type="date" class="form-control" id="recipient-name" name="date" value="<%= value.date %>">
+          </div>
+        </div>
+        <div class="col">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">State :</label>
+            <input type="text" class="form-control" id="recipient-name" name="state" value="<%= value.state %>">
+          </div>
+        </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col">
+
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Item :</label>
+            <select class="form-select" aria-label="Default select example" name="productname" id="recipient-name">
+              <optgroup label="AC">
+                <option value="1-HP-AC" <%=value.productname==='1-HP-AC' ? 'selected' : '' %>>1-HP-AC</option>
+                <option value="2-HP-AC" <%=value.productname==='2-HP-AC' ? 'selected' : '' %>>2-HP-AC</option>
+                <option value="3-HP-AC" <%=value.productname==='3-HP-AC' ? 'selected' : '' %>>3-HP-AC</option>
+                <option value="5-HP-AC" <%=value.productname==='5-HP-AC' ? 'selected' : '' %>>5-HP-AC</option>
+                <option value="7.5-HP-AC" <%=value.productname==='7.5-HP-AC' ? 'selected' : '' %>>7.5-HP-AC</option>
+                <option value="10-HP-AC" <%=value.productname==='10-HP-AC' ? 'selected' : '' %>>10-HP-AC</option>
+              </optgroup>
+              <optgroup label="DC">
+                <option value="1-HP-DC" <%=value.productname==='1-HP-DC' ? 'selected' : '' %> >1-HP-DC</option>
+                <option value="2-HP-DC" <%=value.productname==='2-HP-DC' ? 'selected' : '' %>>2-HP-DC</option>
+                <option value="3-HP-DC" <%=value.productname==='3-HP-DC' ? 'selected' : '' %>>3-HP-DC</option>
+                <option value="5-HP-DC" <%=value.productname==='5-HP-DC' ? 'selected' : '' %>>5-HP-DC</option>
+                <option value="7.5-HP-DC" <%=value.productname==='7.5-HP-DC' ? 'selected' : '' %>>7.5-HP-DC</option>
+                <option value="10-HP-DC" <%=value.productname==='10-HP-DC' ? 'selected' : '' %>>10-HP-DC</option>
+              </optgroup>
+              <OPtion value="Others" <%=value.productname==='Others' ? 'selected' : '' %>>Others</OPtion>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Item-Type :</label>
+            <select class="form-select" aria-label="Default select example" name="itemtype" id="recipient-name">
+              <option value="Sub" <%=value.itemtype==='Sub' ? 'selected' : '' %>>Sub</option>
+              <option value="Surface" <%=value.itemtype==='Surface' ? 'selected' : '' %>>Surface</option>
+            </select>
+          </div>
+        </div>
+        </div>
+
+
+
+         
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Issue :</label>
+            <!-- <input type="text" class="form-control" id="recipient-name" name="issue" value="<%= value.issue %>"> -->
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="issue"  rows="3" ><%= value.issue %></textarea> 
+          </div>
+          <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Solution :</label>
+            <!-- <input type="text" class="form-control" id="recipient-name" name="solution" value="<%= value.solution %>"> -->
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="solution"  rows="3" ><%= value.solution %></textarea> 
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="mb-3">
+                <label for="formFile" class="col-form-label">Attachment :</label>
+                <input class="form-control"  type="file" id="formFile" name="attachment" value="/upload/<%= value.attachment %>">
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Status :</label>
+                <select class="form-select" aria-label="Default select example" name="status">
+                  <option value="Open" class="open" <%=value.status==='Open' ? 'selected' :'' %>>Open</option>
+                  <option value="Closed" class="closed" <%=value.status==='Closed' ? 'selected' : '' %>>Closed</option>
+                </select>
+              </div>
+              
+
+            </div>
+          </div>
+        </form>
+      </div>
+      
+    </div>
+
+    <div class="col p-5 border rounded">
+       <label for="recipient-name" class="col-form-label">Attachment :</label>
+      <br><br>
+      <a href="/upload/<%= value.attachment %>" download><img src="/upload/<%= value.attachment %>" alt="Attachment" style="width:80%;height:80%;"></a>
+    </div>
+
+  </div>
+
+  <div class="modal-footer mx-5 p-3">
+    <button type="button" class="btn btn-primary" id="user-form-submit">submit</button>
+  </div>
+</div>
+   
+      
+    
+  
+       
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+        <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
+        <script>
+          new DataTable('#example');
+
+
+          // code for form submit 
+          var userform = document.getElementById('userform')
+          var userformsubmit = document.getElementById('user-form-submit')
+          userformsubmit.addEventListener('click', (event) => {
+            event.preventDefault()
+            userform.submit()
+          })
+
+          //    particular row delete in a form table
+
+          var deletebtn = getElementById('delete-btn')
+          deletebtn.addEventListener('click', () => {
+
+          })
+
+        </script>
+</body>
+
+</html>
+
+</body>
+
+</html>

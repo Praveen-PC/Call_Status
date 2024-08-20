@@ -1,0 +1,146 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: poppins;
+} 
+
+/* --------------------------- new call ----------------- */
+
+/* .newcall{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: none;
+    width:15cm;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+}
+.newcall div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.newcall form{
+    display: flex;
+    flex-direction: column;
+}
+.newcall label{
+    margin-top: 5px;
+}
+.newcall input{
+    padding: 3px;
+}
+select,option{
+    padding:3px ;
+}
+.newcall #submit{
+      padding: 5px;
+      margin-top: 10px;
+      border-radius: 5px;
+      background-color: green;
+} */
+
+/* -------------------- visible ------------ */
+/* .visible table,thead,tbody,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+    margin-top: 20px;
+} */
+/* .edit{
+    color: blue;
+    padding: 5px;
+}
+.delete{
+    color: red;
+    padding: 5px;
+} */
+
+
+/* ----------------solution ----------------------- 
+/* .add{
+    padding:3px;
+    color:green;
+    border-radius: 3px;
+}
+
+.solution{
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    width: 10cm;
+    top: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: none;
+    z-index: 3;
+    left: 17cm;
+}
+.solution div{
+    display: flex;
+    justify-content: space-between;
+}
+.solution form{
+    display: flex;
+    flex-direction: column;
+}
+.solution input{
+    padding: 2px;
+    margin-top: 3px;
+}
+#sub_btn{
+    background-color: goldenrod;
+    border-radius: 3px;
+    width: 2cm;
+    margin-top: 20px;
+}
+
+.modal-dialog.custom-width {
+    max-width: 80cm; /* Adjust width as needed 
+}
+
+.modal-content {
+    padding: 20px; /* Add padding if needed 
+} */
+
+
+
+/* @media screen and (max-width: 600px) {
+
+    #header{
+        justify-content: space-between;
+    }
+    .logo h1{
+        font-size:larger;
+        font-weight: 600;
+    }
+    .logo img{
+        width: 1cm;
+    }
+    .newcall{
+        width:5.5cm;
+        
+    }
+    .visible{
+        width: 4cm;
+    }
+
+    .solution{
+        border-radius: 10px;
+        padding: 10px;
+        position: absolute;
+        width: 5cm;
+        top: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        display: none;
+        z-index: 3;
+        left:3cm;
+    }
+    
+} */
+
+/* @media screen and (max-width: 600px){
+    #edit{
+        display: flex;
+        flex-direction: column;
+    }
+} */
